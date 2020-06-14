@@ -1,0 +1,49 @@
+@mixin flexbox {
+  display: flex;
+}
+
+*{
+   box-sizing: border-box;
+   padding:0;
+   margin:0;
+
+   body {
+     background: black;
+     color: white;
+     text-align: center;
+
+     // header {
+     //   height: 10vh;
+     //   background: red;
+     // }
+
+     main {
+       height: 85vh;
+       background: purple;
+       @include flexbox;
+
+       nav{
+         background: blue;
+         height: 100%;
+         width: 200px;
+       }
+
+       .pory {
+         color: black;
+         background: orange;
+         margin: auto;
+         padding: 5px;
+         @include flexbox;
+         flex-direction: column;
+       }
+     }
+
+     footer {
+       height: 5vh;
+       background: green;
+     }
+   }
+}
+
+@import 'header';
+@import 'footer';
